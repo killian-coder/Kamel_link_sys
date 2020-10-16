@@ -1,8 +1,9 @@
 # Kamel link system 
-the system  will be used to manage day to day activity of kamel links 
+The system  will be used to manage day to day activity of kamel links 
 
-#INSTALATION 
-Clone the main branch 
+# INSTALATION 
+
+clone the main branch 
 create a virtual env 
 run pip install -r requirement.txt inside  the root folder
 run python manage.py createsuper user 
