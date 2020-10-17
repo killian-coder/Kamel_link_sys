@@ -1,6 +1,7 @@
 from django.urls import path
 from django.views.generic import TemplateView
+from .views import ServiceView
 
 urlpatterns = [
-    path('services', TemplateView.as_view(template_name='services.html')),
+    path('services/', ServiceView.as_view()),
 ]

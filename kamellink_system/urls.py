@@ -22,7 +22,7 @@ from services.views import ServiceView
 urlpatterns = [
     path('home/', include('home.urls')),
     path('admin/', admin.site.urls),
-    path('about/', ServiceView.as_view()),
+    path('service/', ServiceView.as_view()),
 
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

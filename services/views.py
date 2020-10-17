@@ -1,12 +1,11 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
-from .models import Service
+from django.views.generic import ListView
+from services.models import Service
 
 
 # Create your views here.
 
 
-class ServiceView(TemplateView):
+class ServiceView(ListView):
     template_name = "services.html"
-
-    services_list = Service
+    model = Service
