@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect
-from .models import ContactDetails, ContactUs
+from django.shortcuts import render
+from django.views.generic import ListView
+from .models import ContactUs
+
 
 
 # Create your views here.
 
-def contact_us(request):
-    c = ContactDetails.objects.all()
-    return redirect(c)
 
+class ContactView(ListView):
+    template_name = "contact.html"
+    model = ContactUs

@@ -18,11 +18,13 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 from services.views import ServiceView
+from contact_us.views import ContactView
 
 urlpatterns = [
-    path('home/', include('home.urls')),
+    path('', include('home.urls')),
     path('admin/', admin.site.urls),
     path('service/', ServiceView.as_view()),
+    path('contact/', ContactView.as_view(), name='contact_url'),
 
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
