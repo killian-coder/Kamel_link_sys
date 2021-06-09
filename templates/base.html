@@ -52,8 +52,8 @@
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="has-children">
+                <li><a href="{% url 'about_us_url' %}">About Us</a></li>
+                <!-- <li class="has-children">
                   <a href="/service/">Services</a>
                   <ul class="dropdown">
                     <li><a href="#">Air Freight</a></li>
@@ -62,10 +62,10 @@
                     <li><a href="#">Warehousing</a></li>
                     <li><a href="#">Storage</a></li>
                   </ul>
-                </li>
-                <li><a href="industries.html">Industries</a></li>
+                </li> -->
+                <!-- <li><a href="industries.html">Industries</a></li> -->
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{% url 'contact_url'%}">Contact</a></li>
               </ul>
             </nav>
           </div>
