@@ -19,12 +19,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 from services.views import ServiceView
 from contact_us.views import ContactView
+from home.views import Homeview
+from about_us.views import AboutUsview
 
 urlpatterns = [
-    path('', include('home.urls')),
+    # path('', include('home.urls')),
+    path('', Homeview.as_view(), name='home_url'),
     path('admin/', admin.site.urls),
     path('service/', ServiceView.as_view()),
     path('contact/', ContactView.as_view(), name='contact_url'),
+    path('aboutUs/', AboutUsview.as_view(), name='about_us_url'),
 
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
