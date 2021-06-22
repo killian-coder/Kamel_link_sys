@@ -24,7 +24,7 @@ from about_us.views import AboutUsview
 
 urlpatterns = [
     # path('', include('home.urls')),
-    path('', Homeview.as_view(), name='home_url'),
+    path('/', Homeview.as_view(), name='home_url'),
     path('admin/', admin.site.urls),
     path('service/', ServiceView.as_view()),
     path('contact/', ContactView.as_view(), name='contact_url'),
