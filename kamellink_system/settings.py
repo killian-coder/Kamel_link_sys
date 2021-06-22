@@ -29,7 +29,7 @@ SECRET_KEY = '3l@1142no1w0mt8=)zv((!*5rn8_jh5ku++$vop%77m+!#6bm)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['kamel-link-ltd.herokuapp.com']
 
 
 # Application definition
@@ -89,9 +89,11 @@ DATABASES = {
     }
 }
 
+
 STATICFILES_DIRS = [
+    
     BASE_DIR / "static",
-    '/var/www/static/',
+    # '/var/www/static/',
     # os.path.join(BASE_DIR, 'kamellink_system/static')
 ]
 
@@ -127,7 +129,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+#  Add configuration for static files storage using whitenoise
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -135,4 +138,5 @@ STATIC_ROOT = BASE_DIR /'staticfiles'
 
 STATIC_URL = '/static/'
 
+django_heroku.settings(locals())
 
